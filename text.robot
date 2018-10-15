@@ -6,7 +6,6 @@ Resource          resource.robot
 *** Test Cases ***
 sign up
     open Browser    https://hospitalreservationsystem.herokuapp.com/    browser=chrome
-    Maximize Browser Window
     sleep    6    Wait for a reply
     Click Link    xpath=//a[@href="index.jsp"]
     sleep    2    Wait for a reply
@@ -27,7 +26,6 @@ sign up
 AgileonLogin
     [Tags]    Agileone    # Agileone
     open Browser    https://hospitalreservationsystem.herokuapp.com/index.jsp    browser=chrome
-    Maximize Browser Window
     sleep    2    Wait for a reply
     Click Link    xpath=//a[@href="index.jsp"]
     sleep    2    Wait for a reply
@@ -41,7 +39,6 @@ AgileonLogin
 
 Add Departments' information
     open Browser    https://hospitalreservationsystem.herokuapp.com/view/Management.jsp    browser=chrome
-    Maximize Browser Window
     Click Link    xpath=//a[@href="ManageDepartment.jsp"]
     Sleep    2    Wait for a reply
     Click Link    xpath=//a[@href="AdminAddDepart.jsp"]
@@ -54,7 +51,6 @@ Add Departments' information
 
 Add doctors' information
     open Browser    https://hospitalreservationsystem.herokuapp.com/view/Management.jsp    browser=chrome
-    Maximize Browser Window
     Click Link    xpath=//a[@href="ManageDoctor.jsp"]
     Sleep    3    Wait for a reply
     Click Link    xpath=//a[@href="AdminAddDoctor.jsp"]
@@ -73,7 +69,6 @@ Add doctors' information
 
 Admin_Addusers
     open Browser    https://hospitalreservationsystem.herokuapp.com/view/Management.jsp    browser=chrome
-    Maximize Browser Window
     Click Link    xpath=//a[@href="ManageUser.jsp"]
     Sleep    3    Wait for a reply
     Click Link    xpath=//a[@href="AdminAddUser.jsp"]
@@ -90,7 +85,6 @@ Admin_Addusers
 
 Delete doctors' information
     open Browser    https://hospitalreservationsystem.herokuapp.com/view/Management.jsp    browser=chrome
-    Maximize Browser Window
     Click Link    xpath=//a[@href="ManageDepartment.jsp"]
     Sleep    5    Wait for a reply
     Click Button    xpath=//input[@value="Delect"]
@@ -99,7 +93,6 @@ Delete doctors' information
 
 Delete Departments' information
     open Browser    https://hospitalreservationsystem.herokuapp.com/view/Management.jsp    browser=chrome
-    Maximize Browser Window
     Click Link    xpath=//a[@href="ManageDepartment.jsp"]
     Sleep    5    Wait for a reply
     Click Button    xpath=//input[@onclick="Dedepart('Surgery department')"]
@@ -108,7 +101,6 @@ Delete Departments' information
 
 Delete User
     open Browser    https://hospitalreservationsystem.herokuapp.com/view/Management.jsp    browser=chrome
-    Maximize Browser Window
     Click Link    xpath=//a[@href="ManageUser.jsp"]
     Sleep    4    Wait for a reply
     Click element    xpath=/html/body/h1/div/div[2]/div[2]/div[2]/div[3]/div/div/div[2]/div/div/input
@@ -121,7 +113,6 @@ Delete User
 
 Add appointment
     open Browser    https://hospitalreservationsystem.herokuapp.com/index.jsp    browser=chrome
-    Maximize Browser Window
     sleep    2    Wait for a reply
     Click Link    xpath=//a[@href="index.jsp"]
     sleep    2    Wait for a reply
@@ -157,7 +148,6 @@ Add appointment
 
 Review my appointments
     open Browser    https://hospitalreservationsystem.herokuapp.com/index.jsp    browser=chrome
-    Maximize Browser Window
     sleep    2    Wait for a reply
     Click Link    xpath=//a[@href="index.jsp"]
     sleep    2    Wait for a reply
@@ -180,7 +170,6 @@ Review my appointments
 
 Check list of appointments
     open Browser    https://hospitalreservationsystem.herokuapp.com/index.jsp    browser=chrome
-    Maximize Browser Window
     sleep    2    Wait for a reply
     Click Link    xpath=//a[@href="index.jsp"]
     sleep    2    Wait for a reply
