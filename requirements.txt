@@ -1,8 +1,9 @@
 PyYAML==3.11
 
 
+
 robotframework
-robotframework-selenium2
-library
-image
+
+robotframework-selenium2library
+
 robotframework-selenium2test
