@@ -124,7 +124,7 @@ Add appointment
     Sleep    2    Wait for a reply
     Click Link    xpath=//a[@href="MakeappointmentDepart.jsp"]
     Sleep    4    Wait for a reply
-    Click Element    xpath=//*[@id="addDepart"]/div[2]
+    Click Element    xpath=//*[@id="addDepart"]/div
     Sleep    4    Wait for a reply
     Click Element    xpath=//*[@id="add"]/div[1]/div/div[1]/div[2]/div/div/p
     Sleep    4    Wait for a reply
@@ -134,7 +134,9 @@ Add appointment
     Click Button    xpath=//button[@class="picker__button--close"]
     Sleep    3
     Click Button    Time
-    Click Element    xpath=/html/body/h1/div/div[2]/div[2]/div[2]/div[1]/div/div/div/div/ul/li[1]
+    Execute Javascript    document.getElementById('Time').value="9:00AM"
+    Sleep    3
+    Click Element    xpath=//*[@id="Time_root"]/div/div
     Sleep    3
     Click Button    id=comfirm
     Sleep    3
