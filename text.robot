@@ -1,7 +1,5 @@
 *** Settings ***
-Documentation     A test suite with a single test for valid login.
 Library           Selenium2Library
-Resource          resource.robot
 
 *** Test Cases ***
 sign up
@@ -105,10 +103,6 @@ Delete User
     Sleep    4    Wait for a reply
     Click element    xpath=/html/body/h1/div/div[2]/div[2]/div[2]/div[3]/div/div/div[2]/div/div/input
     Sleep    3    Wait for a reply
-    open Browser    https://hospitalreservationsystem.herokuapp.com/view/Management.jsp
-    Sleep    3    Wait for a reply
-    Click button    id="logout
-    Sleep    3    Wait for a reply
     close Browser
 
 Add appointment
@@ -122,7 +116,7 @@ Add appointment
     Input Text    id=loginPassword    123456
     Click Button    Log in
     Sleep    5    Wait for a reply
-    ${message}    Confirm Action
+    ${message}    Handle Alert
     Should Be Equal as Strings    ${message}    Log in successfully
     choose ok on next confirmation
     Sleep    2    Wait for a reply
@@ -130,7 +124,7 @@ Add appointment
     Sleep    2    Wait for a reply
     Click Link    xpath=//a[@href="MakeappointmentDepart.jsp"]
     Sleep    4    Wait for a reply
-    Click Element    xpath=//div[@class="h6" and @onclick="selectDepart()"]
+    Click Element    xpath=//*[@id="addDepart"]/div[2]
     Sleep    4    Wait for a reply
     Click Element    xpath=//*[@id="add"]/div[1]/div/div[1]/div[2]/div/div/p
     Sleep    4    Wait for a reply
@@ -140,7 +134,7 @@ Add appointment
     Click Button    xpath=//button[@class="picker__button--close"]
     Sleep    3
     Click Button    Time
-    Click Element    xpath=//*[@id="Time_root"]/div/div/div/div/ul/li[12]
+    Click Element    xpath=/html/body/h1/div/div[2]/div[2]/div[2]/div[1]/div/div/div/div/ul/li[1]
     Sleep    3
     Click Button    id=comfirm
     Sleep    3
@@ -157,12 +151,9 @@ Review my appointments
     Input Text    id=loginPassword    123456
     Click Button    Log in
     Sleep    5    Wait for a reply
-    ${message}    Confirm Action
+    ${message}    Handle Alert
     Should Be Equal as Strings    ${message}    Log in successfully
     choose ok on next confirmation
-    Sleep    2    Wait for a reply
-    open Browser    http://localhost:8100/HospitalReservationSystem/view/Homepage.jsp    browser=chrome
-    Maximize Browser Window
     Sleep    2    Wait for a reply
     Click Link    xpath=//a[@href="Myappointment.jsp"]
     Sleep    2    Wait for a reply
@@ -175,14 +166,10 @@ Check list of appointments
     sleep    2    Wait for a reply
     Click Button    id=lgbtn
     Sleep    2    Wait for a reply
-    Input Text    id=loginEmail    yuri@gmail.com
-    Input Text    id=loginPassword    123456
+    Input Text    id=loginEmail    426048828@qq.com
+    Input Text    id=loginPassword    13456789
     Click Button    Log in
-    Sleep    5    Wait for a reply
-    ${message}    Confirm Action
-    Should Be Equal as Strings    ${message}    Log in successfully
-    choose ok on next confirmation
-    Sleep    2    Wait for a reply
+    Sleep    8    Wait for a reply
     Click Link    xpath=//a[@href="DoctorHomepage.jsp"]
     Sleep    2    Wait for a reply
     close Browser
