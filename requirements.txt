@@ -6,4 +6,3 @@ robotframework
 
 robotframework-selenium2library
 
-robotframework-selenium2test
